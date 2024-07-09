@@ -1,12 +1,9 @@
 package com.example.gamecar1.Model;
 
+public class Coin extends GameObject{
 
-public class Stone extends GameObject{
-
-    public Stone() {
+    public Coin() {
         super();
     }
-
-
 
 }

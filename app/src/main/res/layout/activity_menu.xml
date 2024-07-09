@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MenuActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu_IMG_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_play"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:text="Start Play"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:textColor="@color/blue_400"
+            android:backgroundTint="@color/white"
+            android:enabled="false"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menu_LBL_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Game Mode:"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/default_margin"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_BTN_fast"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Fast"
+        android:textSize="50sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:backgroundTint="@color/green_400"
+        app:strokeColor = "@color/grey_400"
+        app:strokeWidth="2dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_BTN_slow"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Slow"
+        android:textSize="50sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:backgroundTint="@color/red_400"
+        app:strokeColor = "@color/grey_400"
+        app:strokeWidth="2dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_BTN_sensor"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Sensor Mode"
+        android:textStyle="italic"
+        android:textSize="32sp"
+        android:backgroundTint="@color/purple_400"
+        app:strokeColor = "@color/grey_400"
+        app:strokeWidth="2dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/menu_BTN_top10"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/default_margin"
+        app:icon="@drawable/top3_icon"
+        android:text="top 10"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="@color/yellow_600"
+        />
+
+</RelativeLayout>

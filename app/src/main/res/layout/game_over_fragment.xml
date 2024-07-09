@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#CC000000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/game_over_IMG_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragment_LBL_game_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Game Over"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="72sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_BTN_restart"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:text="Play Again"
+            android:textSize="25sp"
+            android:backgroundTint="@color/blue_400"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_BTN_exit"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/blue_400"
+            android:text="Back to Menu"
+            android:textSize="25sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
