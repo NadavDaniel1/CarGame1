@@ -1,11 +1,10 @@
 package com.example.gamecar1;
 
-
 import android.content.Context;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -27,7 +26,6 @@ import com.example.gamecar1.Utilities.Utils;
 
 
 import java.util.List;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         gameManager = new GameManager(this);
         findViews();
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         lanes = new float[]{laneWidth / 2f, laneWidth * 1.5f, laneWidth * 2.5f, laneWidth * 3.5f, laneWidth * 4.5f};
         handelTimers.initChosenModeFromUser();
         setAndInitVolume();
-        if(handelTimers.isSensorMode()) {
+        if (handelTimers.isSensorMode()) {
             initMoveDetector();
         }
     }
@@ -132,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         soundPlayer.release();
     }
 
-    private void stopMoverDetector(){
+    private void stopMoverDetector() {
         if (handelTimers.isSensorMode()) {
             moveDetector.stop();
         }
@@ -187,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
         handleCoins.createAndMoveCoins();
     }
 
-    public void restartGame(){
+    public void restartGame() {
         finish();
         startActivity(getIntent());
     }
@@ -199,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
     public void gameOver() {
         handelTimers.stopTimers();
         stopMoverDetector();
@@ -206,17 +206,18 @@ public class MainActivity extends AppCompatActivity {
         gameManager.resetAllObjectsVisibility(gameManager.getStoneVisibilityMatrix());
         handleCoins.updateCoinPosition();
         handleStones.updateStonePosition();
+        Utils.addScore(gameManager.getScores());
         showGameOverFragment();
     }
 
-    private void setAndInitVolume(){
+    private void setAndInitVolume() {
         // Set media volume
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamVolume(AudioManager.STREAM_MUSIC), 0);
         soundPlayer = new SoundPlayer(this);
     }
 
-    public void initMainBackground(){
+    public void initMainBackground() {
         Glide
                 .with(this)
 //                .load(R.drawable.colosseum)
@@ -226,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 .into(game_IMG_background);
     }
 
-    private void findHeartsView(){
+    private void findHeartsView() {
         main_IMG_hearts = new AppCompatImageView[]{
                 findViewById(R.id.main_IMG_heart1),
                 findViewById(R.id.main_IMG_heart2),
@@ -234,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
-    private void findStonesAndCoinsViews(){
+    private void findStonesAndCoinsViews() {
         stoneMatrix = new AppCompatImageView[Utils.ROWS][Utils.COLS];
         List<Stone> stones = DataManager.getStones();
         for (Stone stone : stones) {
@@ -248,11 +249,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public AppCompatImageView getLeftBTN(){
+    public AppCompatImageView getLeftBTN() {
         return main_BTN_left;
     }
 
-    public AppCompatImageView getRightBTN(){
+    public AppCompatImageView getRightBTN() {
         return main_BTN_right;
     }
 

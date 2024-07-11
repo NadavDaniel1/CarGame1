@@ -35,7 +35,7 @@ public class SharedPreferencesManagerV3 {
         editor.apply();
     }
 
-    public String getString( String key, String defaultValue) {
+    public String getString(String key, String defaultValue) {
         return sharedPref.getString(key, defaultValue);
     }
 }

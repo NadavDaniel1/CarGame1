@@ -15,8 +15,10 @@
     <color name="dark_pink_300">#BA2D65</color>
     <color name="pink_200"> #ffddee</color>
     <color name="grey_900"> #212121</color>
-    <color name="default_button_color">#EF5350</color> <!-- Default color -->
-    <color name="selected_button_color">#1A237E</color> <!-- Selected color -->
+    <color name="selected_button_color">#1A237E</color>
+    <color name="brown_300"> #A1887F</color>
+
+    <!-- Selected color -->
 
 
 

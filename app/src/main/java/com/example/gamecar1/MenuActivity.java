@@ -8,18 +8,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
-import com.example.gamecar1.Utilities.SignalManager;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 public class MenuActivity extends AppCompatActivity {
-
-    private String mode;
-    private String speed;
-    private boolean isFastMode = false;
-    private boolean isSlowMode = false;
-    private boolean isSensorMode = false;
-
 
     private AppCompatImageView menu_IMG_background;
     private MaterialButton menu_BTN_play;
@@ -27,6 +19,10 @@ public class MenuActivity extends AppCompatActivity {
     private MaterialButton menu_BTN_slow;
     private MaterialButton menu_BTN_sensor;
     private ExtendedFloatingActionButton menu_BTN_top10;
+
+    private boolean isFastMode = false;
+    private boolean isSlowMode = false;
+    private boolean isSensorMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +47,7 @@ public class MenuActivity extends AppCompatActivity {
         menu_BTN_fast.setOnClickListener(v -> toggleFastMode());
         menu_BTN_slow.setOnClickListener(v -> toggleSlowMode());
         menu_BTN_sensor.setOnClickListener(v -> toggleSensorMode());
+        menu_BTN_top10.setOnClickListener(v -> showTop10());
 
         Glide
                 .with(this)
@@ -59,6 +56,12 @@ public class MenuActivity extends AppCompatActivity {
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(menu_IMG_background);
         updatePlayButtonState();
+    }
+
+    private void showTop10() {
+        Intent intent = new Intent(this, Top10Activity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void changeActivity() {
@@ -96,7 +99,7 @@ public class MenuActivity extends AppCompatActivity {
         if (isSelected) {
             button.setBackgroundColor(ContextCompat.getColor(this, R.color.selected_button_color));
         } else if(button == menu_BTN_slow && !isSelected) {
-            button.setBackgroundColor(ContextCompat.getColor(this, R.color.default_button_color));
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.red_400));
         }else if(button == menu_BTN_fast && !isSelected){
             button.setBackgroundColor(ContextCompat.getColor(this, R.color.green_400));
         }
@@ -113,6 +116,4 @@ public class MenuActivity extends AppCompatActivity {
         else
             menu_BTN_play.setBackgroundColor(ContextCompat.getColor(this, R.color.grey_400));
     }
-
-
 }

@@ -1,14 +1,9 @@
 package com.example.gamecar1.Logic;
 
-
-
 import android.view.View;
-
 import com.example.gamecar1.MainActivity;
 import com.example.gamecar1.R;
-
 import com.google.android.material.textview.MaterialTextView;
-
 
 public class GameManager {
     private MainActivity mainActivity;
@@ -18,12 +13,8 @@ public class GameManager {
     private int lives;
     private int scores;
 
-
-
     public GameManager() {
-
     }
-
     public GameManager(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
         this.lives = 3; // Initial lives
@@ -48,6 +39,8 @@ public class GameManager {
         lives--;
         updateHeartsUI(lives);
     }
+
+    public int getScores() {return scores; }
 
     public int getLives() {
         return lives;
