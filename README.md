@@ -39,6 +39,7 @@ The Car Game App is an interactive mobile application developed for Android that
 **RecyclerView Performance:** Ensuring smooth scrolling and efficient data handling in RecyclerView for the top scores list required careful optimization.
 **Handling Permissions:** Managing runtime permissions for location access required careful consideration 
 to ensure a smooth user experience without compromising security.
+
 **Location on Score Click:** Attempting to show the user's location when a score is clicked.
 
 ## Credits
