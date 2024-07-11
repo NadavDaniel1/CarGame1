@@ -35,10 +35,12 @@ The Car Game App is an interactive mobile application developed for Android that
 
 ## Difficulties Faced
 **Google Maps Integration:** Integrating Google Maps into the app and ensuring it worked seamlessly with the game logic was challenging. I faced issues with API keys and map rendering, which required thorough debugging.
+
 **Real-time Location Updates:** Implementing real-time location updates to track and display the user's location accurately on the map posed several technical challenges.
+
 **RecyclerView Performance:** Ensuring smooth scrolling and efficient data handling in RecyclerView for the top scores list required careful optimization.
-**Handling Permissions:** Managing runtime permissions for location access required careful consideration 
-to ensure a smooth user experience without compromising security.
+
+**Handling Permissions:** Managing runtime permissions for location access required careful consideration to ensure a smooth user experience without compromising security.
 
 **Location on Score Click:** Attempting to show the user's location when a score is clicked.
 
