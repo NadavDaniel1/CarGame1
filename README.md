@@ -33,6 +33,19 @@ The Car Game App is an interactive mobile application developed for Android that
 
 **User-Friendly Interface:** Intuitive controls and clean UI design.
 
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/NadavDaniel/CarGame1.git
+   
+2. Open the project in Android Studio.
+   
+3. Add your Google Maps API key to the local.properties file:
+   **MAPS_API_KEY=your_api_key**
+   
+4. Build and run the application on your Android device or emulator.
+
+
 ## Difficulties Faced
 **Google Maps Integration:** Integrating Google Maps into the app and ensuring it worked seamlessly with the game logic was challenging. I faced issues with API keys and map rendering, which required thorough debugging.
 
