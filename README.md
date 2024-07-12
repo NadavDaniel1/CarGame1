@@ -42,8 +42,6 @@ The Car Game App is an interactive mobile application developed for Android that
 
 **Handling Permissions:** Managing runtime permissions for location access required careful consideration to ensure a smooth user experience without compromising security.
 
-**Location on Score Click:** Attempting to show the user's location when a score is clicked.
-
 ## Credits
 Developed by [Nadav Daniel]
 Course: Mobile Application Development
