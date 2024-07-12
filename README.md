@@ -41,9 +41,10 @@ The Car Game App is an interactive mobile application developed for Android that
 2. Open the project in Android Studio.
    
 3. Add your Google Maps API key to the local.properties file:
-   **MAPS_API_KEY=your_api_key**
+    ```sh
+   MAPS_API_KEY=your_api_key
    
-4. Build and run the application on your Android device or emulator.
+5. Build and run the application on your Android device or emulator.
 
 
 ## Difficulties Faced
