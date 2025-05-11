@@ -7,8 +7,6 @@ This game is designed with a dynamic user interface, Google Maps integration, an
 - **Java -** Core development language.
 - **Android Studio -** IDE for development.
 - **Google Maps API -** Displays player location.
-- **RecyclerView -** Renders Top 10 scores.
-- **SharedPreferences + Gson -** Saves high scores locally.
 
 ## Game Features
 **Dynamic Gameplay -** Avoid falling stones in real-time.
