@@ -1,6 +1,4 @@
 # CarGame – Reflex Racing Game
-My first app was developed as part of the mobile application development course at Afeka College Tel-Aviv.
-
 This game is designed with a dynamic user interface, Google Maps integration, and sensor-based controls, allowing players to dodge falling obstacles while racing for high scores.
 
 ## Technologies Used
