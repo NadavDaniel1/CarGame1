@@ -1,6 +1,13 @@
 # CarGame – Reflex Racing Game
 This game is designed with a dynamic user interface, Google Maps integration, and sensor-based controls, allowing players to dodge falling obstacles while racing for high scores.
 
+## Screenshots
+
+<img src="https://github.com/user-attachments/assets/ad2cd115-ef18-4ed8-82b9-9b29fbb0297c" alt="gameCar1_menu" width="180" height="360">   
+<img src="https://github.com/user-attachments/assets/1ec4c021-6e10-40c9-b2dd-795b1459bae7" alt="gameCar1__gameScreenButtons" width="180" height="360"> 
+<img src="https://github.com/user-attachments/assets/d3e0f874-d3a8-44a1-b464-3902fd23176f" alt="gameCar1_gameOver" width="180" height="360"> 
+<img src="https://github.com/user-attachments/assets/7fdf8757-355e-4abf-907d-c82a19331bb2" alt="gameCar1__recordsTop10" width="180" height="360"> 
+
 ## Technologies Used
 - **Java -** Core development language.
 - **Android Studio -** IDE for development.
@@ -21,12 +28,6 @@ This game is designed with a dynamic user interface, Google Maps integration, an
 
 **RTL Support -** Fully supports right-to-left languages.
 
-## Screenshots
-
-<img src="https://github.com/user-attachments/assets/ad2cd115-ef18-4ed8-82b9-9b29fbb0297c" alt="gameCar1_menu" width="180" height="360">   
-<img src="https://github.com/user-attachments/assets/1ec4c021-6e10-40c9-b2dd-795b1459bae7" alt="gameCar1__gameScreenButtons" width="180" height="360"> 
-<img src="https://github.com/user-attachments/assets/d3e0f874-d3a8-44a1-b464-3902fd23176f" alt="gameCar1_gameOver" width="180" height="360"> 
-<img src="https://github.com/user-attachments/assets/7fdf8757-355e-4abf-907d-c82a19331bb2" alt="gameCar1__recordsTop10" width="180" height="360"> 
 
 
 
